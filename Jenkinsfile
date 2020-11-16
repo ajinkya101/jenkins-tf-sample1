@@ -6,7 +6,7 @@ pipeline{
 	stages{
 		stage('Terraform init'){
 			steps{
-				sh 'terraform init'
+				sh 'ls -alh'
 			}
 		}
 	}
