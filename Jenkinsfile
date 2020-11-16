@@ -20,7 +20,6 @@ pipeline{
                         """                          
                     }
              }
-        }
 
         stage('Terraform Plan'){
             steps {                       
@@ -31,9 +30,5 @@ pipeline{
                         """                       
                 }
             }
-        }
-
-
-
-    }
+}
 }
