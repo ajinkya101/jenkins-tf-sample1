@@ -11,7 +11,8 @@ pipeline{
                         sh """
                             
                         echo "Initialising Terraform"
-                        terraform init
+						
+                        "${WORKSPACE}\terraform init"
                         """                          
                     }
              }
@@ -21,7 +22,7 @@ pipeline{
                         sh """
                         
                         echo "Creating Terraform Plan"
-                        terraform plan
+                        "${WORKSPACE}\terraform plan"
                         """                       
                 }
             }
