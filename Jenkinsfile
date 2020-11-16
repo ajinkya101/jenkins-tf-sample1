@@ -5,26 +5,16 @@ pipeline{
 	}
     stages {
     
-        stage('Terraform Init'){
+        stage('Terraform Version'){
             
             steps { 
                         sh """
                             
                         echo "Initialising Terraform"
 						
-                        "${WORKSPACE}\terraform init"
+                        terraform --version
                         """                          
                     }
              }
-
-        stage('Terraform Plan'){
-            steps {                       
-                        sh """
-                        
-                        echo "Creating Terraform Plan"
-                        "${WORKSPACE}\terraform plan"
-                        """                       
-                }
-            }
 }
 }
